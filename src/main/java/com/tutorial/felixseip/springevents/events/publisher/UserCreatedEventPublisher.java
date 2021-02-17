@@ -6,6 +6,9 @@ import org.springframework.stereotype.Component;
 
 import com.tutorial.felixseip.springevents.events.UserCreatedEvent;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Component
 public class UserCreatedEventPublisher {
 
@@ -13,6 +16,7 @@ public class UserCreatedEventPublisher {
   private ApplicationEventPublisher applicationEventPublisher;
 
   public void publishEmailNotificationEvent(UserCreatedEvent userCreatedEvent) {
+    log.info("publishing user created event");
     applicationEventPublisher.publishEvent(userCreatedEvent);
   }
 
