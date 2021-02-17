@@ -1,4 +1,4 @@
-package com.tutorial.felixseip.springevents;
+package com.tutorial.felixseip.springevents.events;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
